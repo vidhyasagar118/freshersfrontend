@@ -1,1 +1,1 @@
-export const API_URL="https://new-backend-fresher.onrender.com";
+export const API_URL=" https://freshers-combackend.onrender.com";

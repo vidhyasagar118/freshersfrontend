@@ -1,11 +1,9 @@
-/* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Navbar Container ===== */
 .navbar {
   width: 100%;
   height: 12vh;
@@ -25,7 +23,6 @@
   display: flex;
 flex-direction: column;
 color: white;}
-/* ===== Navbar List ===== */
 .navbar ul {
   list-style: none;
   width: 100%;
@@ -34,25 +31,21 @@ color: white;}
   justify-content: space-between;
 }
 
-/* Each li aligned */
 .navbar ul li {
   display: flex;
   align-items: center;
 }
 
-/* ===== Menu Button ===== */
 .showbtn img {
   cursor: pointer;
   filter: invert(1);
 }
 
-/* ===== Logo Image ===== */
 .logomgcub {
   height: 45px;
   object-fit: contain;
 }
 
-/* ===== Sitename (FRESHER.COM) ===== */
 .sitename {
   font-size: 1.8rem;
   font-weight: bold;
@@ -70,7 +63,6 @@ color: white;}
   white-space: nowrap;
 }
 
-/* ===== Login Button ===== */
 .loginbtn {
   display: flex;
   align-items: center;

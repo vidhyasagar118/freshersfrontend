@@ -15,7 +15,6 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
-  // ✅ Google Success
   const handleGoogleSuccess = (credentialResponse) => {
     const user = jwtDecode(credentialResponse.credential);
 
@@ -24,7 +23,6 @@ const Signup = () => {
     setGoogleVerified(true);
   };
 
-  // ✅ Submit to backend only if google verified
   const handleSubmit = async (e) => {
     e.preventDefault();
 

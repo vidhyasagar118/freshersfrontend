@@ -14,7 +14,7 @@ const Votesectiondiv = () => {
   // ✅ Voting Time Check
   useEffect(() => {
     const timer = setInterval(() => {
-      const now = new Date().getTime();
+      const now = new Date().getTime(); 
       const distance = targetDate.getTime() - now;
 
       if (distance <= 0) {

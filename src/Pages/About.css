@@ -1,4 +1,131 @@
-    
-.aboutdiv{
-    margin-top: 10vh;
+.aboutmaindiv {
+  padding: 40px 20px;
+  background: #0f172a;
+  color: white;
+  min-height: 100vh;
+  margin-top: 11vh;
+}
+
+.abouttopdiv {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.abouttopdiv h1 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+}
+
+.abouttopdiv h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #facc15;
+}
+
+.abouttopdiv p {
+  margin-top: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.aboutmaingriddiv {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .aboutmaingriddiv {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .aboutmaingriddiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .abouttopdiv h1 {
+    font-size: 2rem;
+  }
+
+  .abouttopdiv h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🔷 Student Card */
+.aboutgridcard {
+  background: #020617;
+  border-radius: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.aboutgridcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+}
+
+/* Image */
+.aboutgridcard img {
+  width: 100%;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* Name */
+.aboutgridcard h4 {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  line-height: 1.2;
+}
+
+/* Enrollment */
+.aboutgridcard p {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  word-break: break-all;
+}
+
+/* 🔷 University Info */
+.aboutinfodiv {
+  margin-top: 70px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.aboutinfodiv h2 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.aboutinfodiv p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* 🔷 Quote */
+.aboutquotediv {
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
+  color: #facc15;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }

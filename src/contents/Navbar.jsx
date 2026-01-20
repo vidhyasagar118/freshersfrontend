@@ -37,7 +37,7 @@ const Navbar = () => {
           <li className="sitename">FRESHER.COM</li>
           <li>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWj1RRDViiqBuHqUrTi1VwRYJ4Ir-LiIPCXg&s"
+              src="https://image-static.collegedunia.com/public/image/09-18:26-Thumbnail_%201%20College%20and%20Exam%20-%202024-11-09T182018.967.jpeg"
               className="logomgcub"
               alt=""
             />

@@ -46,6 +46,7 @@
 }
 
 .auth-form p {
+  color: black;
   margin-top: 8px;
   font-weight: bold;
 }

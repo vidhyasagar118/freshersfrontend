@@ -1,33 +1,50 @@
 .mainnav {
   margin-top: 12vh;
-  width: 30vw;
+  width: 20vw;                
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
-  z-index: 2;
+  z-index: 200;
   transition: all 0.3s ease-in-out;
   transform: translateX(-100%);
   opacity: 0;
-  background-color:lightblue;
+
+  background: linear-gradient(180deg, #081037, #182d5d);
   color: white;
-  display:flex;
-  flex-direction:column;
-align-items: center;
-}
-.mainnavbox{
+
   display: flex;
-flex-direction: column;  margin-top: 100px;
+  flex-direction: column;
+  align-items: center;
 }
-.mainnav button{
-  margin: 2rem;
-  padding: 0.5rem;
-padding-left: 1rem;
-padding-right: 1rem;
-border: none;
-border-radius: 30px;
+
+/* container inside sidebar */
+.mainnavbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  align-items: center;
 }
+
+/* buttons */
+.mainnav button {
+  margin: 1rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mainnav button:hover {
+  background: #1E293B;
+  transform: scale(1.05);
+}
+
+/* show / hide */
 .mainnav.show {
   transform: translateX(0);
   opacity: 1;
@@ -37,7 +54,33 @@ border-radius: 30px;
   transform: translateX(-100%);
   opacity: 0;
 }
-.closemainnavbarbtn{
-  background-color: black;
-  color: white;
+
+/* close button */
+.closemainnavbarbtn {
+  background: #020617;
+  border: 1px solid #38BDF8;
+  color: #38BDF8;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+  .mainnav {
+    width: 30vw;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .mainnav {
+    width: 25vw;
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainnav {
+    width: 25vw;
+        margin-top: 10vh;
+
+  }
 }

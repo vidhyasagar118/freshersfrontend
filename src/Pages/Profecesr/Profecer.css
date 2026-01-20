@@ -1,6 +1,6 @@
 .Profecerscardmaindiv {
   padding: 30px;
-  background-color: #f0f4f8;
+  background-color:#F3F6FA;
   min-height: 60vh;
 }
 .Profecerscardmaindiv h1{
@@ -15,7 +15,7 @@
 }
 
 .profCard {
-  background: #fff;
+  background: #FFFFFF;
   color: black;
   border-radius: 15px;
   padding: 20px;
@@ -48,6 +48,7 @@
 
 .profName {
   font-size: 1.2rem;
+  color: #0F172A;
   font-weight: 600;
   margin-bottom: 8px;
   position: relative;

@@ -4,6 +4,7 @@ import Profecerscard from "./Profecesr/Profecerscard";
 import Footer from "./Footer";
 import "./Home.css";
 import Freshersimg from "../assets/Homeimg.jpeg";
+import Mostexpectedvote from './Mostexpectedvote'
 
 const Home = () => {
   
@@ -14,6 +15,8 @@ const Home = () => {
                 <img src={Freshersimg} alt="freshers banner" />
       </div>
       <Votebtn />
+              <Mostexpectedvote />
+      
       <Profecerscard />
       <Footer />
     </div>

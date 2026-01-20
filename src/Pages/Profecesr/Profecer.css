@@ -5,6 +5,7 @@
 }
 .Profecerscardmaindiv h1{
     text-align: center;
+    color: black;
 }
 .Profecersdiv {
   display: grid;
@@ -15,6 +16,7 @@
 
 .profCard {
   background: #fff;
+  color: black;
   border-radius: 15px;
   padding: 20px;
   text-align: center;

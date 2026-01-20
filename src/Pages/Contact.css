@@ -1,5 +1,110 @@
-.contactdiv{
-    margin-top: 12vh;
-    background-color: black;
-    color: white;
+.contactPage {
+  min-height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
+  display: flex;
+  align-items: center;
+  margin-top: 11vh;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contactCard {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* LEFT SIDE */
+
+.contactImageBox {
+  width: 40%;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contactImage {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+.contactName {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.contactEmail,
+.contactPhone {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+
+.contactFormBox {
+  width: 60%;
+  padding: 40px;
+}
+
+.formTitle {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formInput,
+.formTextarea {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: #38bdf8;
+}
+
+.sendButton {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.sendButton:hover {
+  background: #0284c7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .contactCard {
+    flex-direction: column;
+  }
+
+  .contactImageBox,
+  .contactFormBox {
+    width: 100%;
+  }
 }

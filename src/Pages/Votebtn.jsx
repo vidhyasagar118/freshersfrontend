@@ -56,7 +56,8 @@ const Votebtn = () => {
         <button
           className="Votepageshow"
           disabled={!isLive}
-          onClick={() => navigate("/Votesectiondiv")}
+          onClick={() => navigate("/vote")}
+
         >
           {isLive ? "GO TO VOTE" : "VOTING NOT STARTED"}
         </button>

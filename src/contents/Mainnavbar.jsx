@@ -20,7 +20,8 @@ const Mainnavbar = ({ isVisible, onClose }) => {
 
       <div className='mainnavbox'>
      <button onClick={() => navigate('/')} >HOME</button>
-<button onClick={()=>navigate('/Votesectiondiv')}>Vote</button>
+     <button onClick={()=>navigate('/vote')}>Vote</button>
+
 <button onClick={()=>navigate('/contact')}> contact </button>
 <button onClick={()=>navigate('/about')}> About </button>
 

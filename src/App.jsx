@@ -21,7 +21,8 @@ const App = () => {
         <Route index element={<Home />} />
                 <Route path='Navbar' element={<Navbar />} />
                       <Route path='contact' element={<Contact />} />
-                        <Route path='Votesectiondiv' element={<Votesectiondiv />} />
+                      <Route path='vote' element={<Votesectiondiv />} />
+
                       <Route path='about' element={< About/>} />
 
         <Route path='signup' element={<Signup />} />

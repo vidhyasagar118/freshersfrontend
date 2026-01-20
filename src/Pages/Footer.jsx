@@ -21,7 +21,8 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/Votesectiondiv")}>Vote</li>
+            <li onClick={() => navigate("/vote")}>Vote</li>
+
             <li onClick={() => navigate("/about")}>About</li>
             <li onClick={() => navigate("/contact")}>Contact</li>
           </ul>

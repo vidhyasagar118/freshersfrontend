@@ -11,7 +11,6 @@ const Votesectiondiv = () => {
 
   const targetDate = new Date("2026-03-02T21:30:00");
 
-  // ✅ Voting Time Check
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date().getTime(); 
@@ -78,7 +77,12 @@ const Votesectiondiv = () => {
       <div className="Votesectiondiv">
         {students.map((s) => (
           <div className="studentCard" key={s._id}>
-            <img src={`${API_URL}${s.Imgsrc}`} alt={s.name} />
+          <img
+  src={`/student2025img/${s.enrollmentnum}.jpg`}
+  alt={s.name}
+  onError={(e) =>(e.target.src ="/default.jpeg")}
+/>
+
             <h3>{s.name}</h3>
             <p>Enrollment: {s.enrollmentnum}</p>
             <p className="votes">Votes: {s.votes}</p>

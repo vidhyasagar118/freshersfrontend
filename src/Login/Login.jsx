@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { API_URL } from "../config";  
+import { API_URL } from "../config";
 
 const Login = () => {
   const [email, setEmail] = useState("");
+  const [enrollmentnum, setEnrollmentnum] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [user, setUser] = useState(null);
@@ -21,7 +22,7 @@ const Login = () => {
       const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, enrollmentnum }),
       });
 
       const data = await res.json();
@@ -68,11 +69,31 @@ const Login = () => {
     <div className="auth-container">
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          placeholder="Enrollment Number"
+          value={enrollmentnum}
+          onChange={(e) => setEnrollmentnum(e.target.value.toUpperCase())}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         {error && <p style={{ color: "red" }}>{error}</p>}
         <button type="submit">Login</button>
-        <p>New user? <Link to="/signup">Signup</Link></p>
+        <p>
+          New user? <Link to="/signup">Signup</Link>
+        </p>
       </form>
     </div>
   );

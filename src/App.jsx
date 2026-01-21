@@ -14,6 +14,8 @@ import Contact from './Pages/Contact.jsx'
 import Home from './Pages/Home'
 import About from './Pages/About.jsx'
 import Votesectiondiv from './Pages/Votesection/Votesectiondiv.jsx'
+import Galleryhome from './Pages/Galleryhome.jsx'
+import Gallery from './contents/fulldata/Gallery.jsx'
 const App = () => { 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,6 +29,8 @@ const App = () => {
 
         <Route path='signup' element={<Signup />} />
         <Route path='login' element={<Login />} />
+<Route path="/galleryhome" element={<Galleryhome />} />
+<Route path="/gallery" element={<Gallery />} />
       </Route>
     )
   );

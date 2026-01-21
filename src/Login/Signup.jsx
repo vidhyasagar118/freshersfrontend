@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-
 import "./Login.css";
 import { API_URL } from "../config";
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [enrollmentnum, setEnrollmentnum] = useState("");
   const [googleVerified, setGoogleVerified] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,7 +17,6 @@ const Signup = () => {
 
   const handleGoogleSuccess = (credentialResponse) => {
     const user = jwtDecode(credentialResponse.credential);
-
     setName(user.name);
     setEmail(user.email);
     setGoogleVerified(true);
@@ -34,7 +33,7 @@ const Signup = () => {
       const res = await fetch(`${API_URL}/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, enrollmentnum }),
       });
 
       const data = await res.json();
@@ -43,6 +42,7 @@ const Signup = () => {
         alert("Signup successful");
         navigate("/login");
       } else {
+        alert(data.message); // 🔥 notification
         setError(data.message);
       }
     } catch {
@@ -62,16 +62,15 @@ const Signup = () => {
           />
         )}
 
-        <input
-          placeholder="Name"
-          value={name}
-          disabled
-        />
+        <input placeholder="Name" value={name} disabled />
+
+        <input placeholder="Email" value={email} disabled />
 
         <input
-          placeholder="Email"
-          value={email}
-          disabled
+          placeholder="Enrollment Number"
+          value={enrollmentnum}
+          onChange={(e) => setEnrollmentnum(e.target.value.toUpperCase())}
+          required
         />
 
         <input

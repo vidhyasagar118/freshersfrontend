@@ -98,6 +98,7 @@
 }
 
 .container3d span img {
+  margin-top: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -134,4 +135,9 @@
   .container3d span {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(220px);
   }
+}
+.galleryh1{
+  color: goldenrod;
+  text-align: center;
+  margin-top: 50px;
 }

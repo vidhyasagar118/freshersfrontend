@@ -2,29 +2,33 @@ import React from 'react'
 import "./Gallery.css"
 
 const Gallery = () => {
-
-  const fresherimges= [
-    { id: 1, img: "https://picsum.photos/300/200?1" },
-    { id: 2, img: "https://picsum.photos/300/200?2" },
-    { id: 3, img: "https://picsum.photos/300/200?3" },
-    { id: 4, img: "https://picsum.photos/300/200?4" },
-    { id: 5, img: "https://picsum.photos/300/200?5" },
-    { id: 6, img: "https://picsum.photos/300/200?6" },
-    { id: 7, img: "https://picsum.photos/300/200?7" },
-    { id: 8, img: "https://picsum.photos/300/200?8" },
-    { id: 9, img: "https://picsum.photos/300/200?9" },
-    { id: 10, img: "https://picsum.photos/300/200?10" },
+   const fresherimges = [
+    { id: 1, img: "/gallery/galleryimage1.jpg" },
+    { id: 2, img: "/gallery/galleryimage2.jpg" },
+    { id: 3, img: "/gallery/galleryimage3.jpg" },
+    { id: 4, img: "/gallery/galleryimage4.jpg" },
+    { id: 5, img: "/gallery/galleryimage5.jpg" },
+    { id: 6, img: "/gallery/galleryimage6.jpg" },
+    { id: 7, img: "/gallery/galleryimage7.jpg" },
+    { id: 8, img: "/gallery/galleryimage8.jpg" },
+    { id: 9, img: "/gallery/galleryimage9.jpg" },
+    { id: 10, img: "/gallery/galleryimage10.jpg" },
+    { id: 11, img: "/gallery/galleryimage11.jpg" },
+    { id: 12, img: "/gallery/galleryimage12.jpg" },
+    { id: 13, img: "/gallery/galleryimage13.jpg" },
   ];
-const animation3d=[
-   { id: 1, img: "https://picsum.photos/300/200?1" },
-    { id: 2, img: "https://picsum.photos/300/200?2" },
-    { id: 3, img: "https://picsum.photos/300/200?3" },
-    { id: 4, img: "https://picsum.photos/300/200?4" },
-    { id: 5, img: "https://picsum.photos/300/200?5" },
-    { id: 6, img: "https://picsum.photos/300/200?6" },
-    { id: 7, img: "https://picsum.photos/300/200?7" },
+ const  animation3d = [
+    { id: 1, img: "/round3dani/roundimage1.jpg" },
+    { id: 2, img: "/round3dani/roundimage2.jpg" },
+    { id: 3, img: "/round3dani/roundimage3.jpg" },
+    { id: 4, img: "/round3dani/roundimage4.jpg" },
+    { id: 5, img: "/round3dani/roundimage5.jpg" },
+   { id: 6, img: "/round3dani/roundimage6.jpg" },
+    { id: 7, img: "/round3dani/roundimage7.jpg" },
+        { id: 8, img: "/round3dani/roundimage8.jpg" },
 
-]
+  ];
+
   return (
     <div className='Gallerymaindiv'>
       <h1 className='galleryheading'>
@@ -36,13 +40,13 @@ const animation3d=[
       </h2>
 
       <div className="container3d">
-        {animation3d.slice(0, 8).map((item, index) => (
+        {animation3d.slice(0, 9).map((item, index) => (
           <span key={item.id} style={{ "--i": index + 1 }}>
             <img src={item.img} alt="3d-gallery" />
           </span>
         ))}
       </div>
-
+ <h1 className='galleryh1'> ALL PHOTOS</h1>
       <div className='gallerygrid'>
         {fresherimges.map((item) => (
           <div className='gallerycard' key={item.id}>

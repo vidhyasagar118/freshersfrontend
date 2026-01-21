@@ -1,26 +1,32 @@
-import React from 'react';
+import React from "react";
 import "./Galleryhome.css";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 const images = [
-  "https://i.pinimg.com/originals/a9/56/14/a95614f4885a0b91175902e6910b7178.jpg",
-  "https://i.pinimg.com/originals/a9/56/14/a95614f4885a0b91175902e6910b7178.jpg",
-  "https://i.pinimg.com/originals/a9/56/14/a95614f4885a0b91175902e6910b7178.jpg",
-  "https://i.pinimg.com/originals/a9/56/14/a95614f4885a0b91175902e6910b7178.jpg",
+  "/galleryhome/galleryhome1.jpeg",
+  "/galleryhome/galleryhome2.jpeg",
+  "/galleryhome/galleryhome3.jpeg",
+  "/galleryhome/galleryhome4.jpeg",
 ];
 
 const Galleryhome = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
   return (
-    <div className='gallerymainhome'>
-      <h2>Freshers 2024 photos</h2>
-      <div className='gallerygrid'>
+    <div className="gallerymainhome">
+      <h1>Freshers 2024 Photos</h1>
+
+      <div className="gallerygrid">
         {images.map((img, index) => (
-          <div className='gallerycard' key={index}>
-            <img src={img} alt={`Gallery ${index + 1}`} />
+          <div className="gallerycard" key={index}>
+            <img src={img} alt={`gallery-${index}`} />
           </div>
         ))}
       </div>
-      <button className='morebtn' onClick={()=>{navigate("/gallery")}}>more photos</button>
+
+      <button className="morebtn" onClick={() => navigate("/gallery")}>
+        More Photos
+      </button>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 .aboutmaindiv {
-  padding: 40px 20px;
-  background: #0f172a;
-  color: white;
+  width: 100%;
   min-height: 100vh;
-  margin-top: 11vh;
+  background: #0b0f1a;
+  color: #fff;
+  padding: 120px 5% 60px;
 }
 
+/* ---------- TOP SECTION ---------- */
 .abouttopdiv {
   text-align: center;
   max-width: 900px;
@@ -14,118 +15,107 @@
 
 .abouttopdiv h1 {
   font-size: 2.5rem;
-  color: #38bdf8;
+  margin-bottom: 10px;
+  color: #4fc3f7;
 }
 
 .abouttopdiv h2 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  color: #facc15;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #ffcc70;
 }
 
 .abouttopdiv p {
-  margin-top: 15px;
-  color: #cbd5e1;
-  line-height: 1.7;
   font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
 }
 
+/* ---------- GRID SECTION ---------- */
 .aboutmaingriddiv {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
-/* ✅ Tablet */
-@media (max-width: 1024px) {
-  .aboutmaingriddiv {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* ✅ Mobile */
-@media (max-width: 768px) {
-  .aboutmaingriddiv {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .abouttopdiv h1 {
-    font-size: 2rem;
-  }
-
-  .abouttopdiv h2 {
-    font-size: 1.2rem;
-  }
-}
-
-/* 🔷 Student Card */
+/* ---------- CARD ---------- */
 .aboutgridcard {
-  background: #020617;
-  border-radius: 14px;
-  padding: 12px 10px;
+  background: linear-gradient(145deg, #11182b, #0b1020);
+  border-radius: 15px;
+  padding: 20px 15px;
   text-align: center;
   transition: 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .aboutgridcard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(79, 195, 247, 0.3);
 }
 
-/* Image */
+/* ---------- IMAGE ---------- */
 .aboutgridcard img {
-  width: 100%;
-  height: 90px;
-  object-fit: contain;
-}
-
-/* Name */
-.aboutgridcard h4 {
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #e2e8f0;
-  line-height: 1.2;
-}
-
-/* Enrollment */
-.aboutgridcard p {
-  margin-top: 4px;
-  font-size: 0.75rem;
-  color: #94a3b8;
-  word-break: break-all;
-}
-
-/* 🔷 University Info */
-.aboutinfodiv {
-  margin-top: 70px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.aboutinfodiv h2 {
-  color: #38bdf8;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4fc3f7;
   margin-bottom: 12px;
 }
 
-.aboutinfodiv p {
-  color: #cbd5e1;
-  line-height: 1.7;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+/* ---------- TEXT ---------- */
+.aboutgridcard h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
-/* 🔷 Quote */
+.aboutgridcard p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ---------- INFO SECTION ---------- */
+.aboutinfodiv {
+  margin-top: 80px;
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.aboutinfodiv h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #4fc3f7;
+}
+
+.aboutinfodiv p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* ---------- QUOTE ---------- */
 .aboutquotediv {
   margin-top: 50px;
   text-align: center;
   font-style: italic;
-  color: #facc15;
-  font-size: 1.05rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #ffcc70;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .abouttopdiv h1 {
+    font-size: 1.8rem;
+  }
+
+  .abouttopdiv h2 {
+    font-size: 1.1rem;
+  }
+
+  .aboutgridcard img {
+    width: 110px;
+    height: 110px;
+  }
 }

@@ -40,10 +40,11 @@ const About = () => {
         ) : (
           seniors.map((senior, index) => (
             <div className="aboutgridcard" key={index}>
-              {/* <img
-                src={senior.src || "/defaultuser.png"}
-                alt={senior.name}
-              /> */}
+               <img
+               src={`/Aboutseniorimg/${senior.enrollmentno}.jpg`}
+  alt={senior.name}
+  onError={(e) =>(e.target.src ="/default.jpeg")}
+/>
               <h4>{senior.name}</h4>
               <p>{senior.enrollmentno}</p>
             </div>

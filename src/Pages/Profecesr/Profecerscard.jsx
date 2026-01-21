@@ -1,19 +1,16 @@
-
 import React, { useEffect, useState } from "react";
 import "./Profecer.css";
 import { API_URL } from "../../config";
 
-import subhamImg from "../../assets/subham.jpeg";
-import sunilImg from "../../assets/sunil.jpeg";
-import vikashImg from "../../assets/vikash.jpeg";
-import vipinImg from "../../assets/vipin.jpeg";
-const imageMap = {
-  "vikash parik": vikashImg,
-  "sunil kumar": sunilImg,
-  "shubham kumar": subhamImg,
-  "vipin kumar": vipinImg,
-};
+const normalizeName = (name = "") =>
+  name.toLowerCase().replace(/\./g, "").replace(/\s+/g, " ").trim();
 
+const imageMap = {
+  "dr vikash pareek": "/profecers/vikash.jpeg",
+  "dr sunil kumar": "/profecers/sunil.jpeg",
+  "dr shubham kumar": "/profecers/subham.jpeg",
+  "dr anil kumar": "/profecers/anil.jpeg",
+};
 
 const Profecerscard = () => {
   const [profecerdata, setProfecerdata] = useState([]);
@@ -43,19 +40,23 @@ const Profecerscard = () => {
         {loading ? (
           <h2>Loading...</h2>
         ) : (
-          profecerdata.map((prof) => (
-            <div className="profCard" key={prof._id}>
-              <div className="profImgWrapper">
-<img
-  src={imageMap[prof.name.toLowerCase()] || subhamImg}
-  alt={prof.name}
-/>
+          profecerdata.map((prof) => {
+            const cleanName = normalizeName(prof.name);
 
+            return (
+              <div className="profCard" key={prof._id}>
+                <div className="profImgWrapper">
+                  <img
+                    src={imageMap[cleanName] || "/profecers/subham.jpeg"}
+                    alt={prof.name}
+                  />
+                </div>
+
+                <h3 className="profName">{prof.name.trim()}</h3>
+                <p className="profRole">{prof.role}</p>
               </div>
-              <h3 className="profName">{prof.name}</h3>
-              <p className="profRole">{prof.role}</p>
-            </div>
-          ))
+            );
+          })
         )}
       </div>
     </div>

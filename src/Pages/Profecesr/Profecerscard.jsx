@@ -9,7 +9,7 @@ const imageMap = {
   "dr vikash pareek": "/profecers/vikash.jpeg",
   "dr sunil kumar": "/profecers/sunil.jpeg",
   "dr shubham kumar": "/profecers/subham.jpeg",
-  "dr anil kumar": "/profecers/anil.jpeg",
+  "dr arvind kumar": "/profecers/arvind.jpeg",
 };
 
 const Profecerscard = () => {

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Votebtn = () => {
   const navigate = useNavigate();
 
-  const targetDate = new Date("2026-03-02T21:30:00");
+  const targetDate = new Date("2026-03-01T21:30:00");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

@@ -17,6 +17,12 @@ const Login = () => {
   }, []);
 
   const handleSubmit = async (e) => {
+    const regex = /^MGCU(2022|2023|2024|2025)CSIT30\d{2}$/;
+
+if (!regex.test(enrollmentnum)) {
+  return setError("Invalid Enrollment Number format");
+}
+
     e.preventDefault();
     try {
       const res = await fetch(`${API_URL}/api/auth/login`, {

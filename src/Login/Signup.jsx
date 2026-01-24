@@ -21,9 +21,15 @@ const Signup = () => {
     setEmail(user.email);
     setGoogleVerified(true);
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+const regex = /^MGCU(2022|2023|2024|2025)CSIT30\d{2}$/;
+
+if (!regex.test(enrollmentnum)) {
+  return setError("Invalid Enrollment Number format");
+}
 
     if (!googleVerified) {
       return setError("Please verify with Google first");

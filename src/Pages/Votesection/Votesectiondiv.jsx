@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Votesection.css";
 import { API_URL } from "../../config";
-
 const Votesectiondiv = () => {
   const [students, setStudents] = useState([]);
   const [hasVoted, setHasVoted] = useState(false);

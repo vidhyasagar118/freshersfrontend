@@ -16,14 +16,12 @@
 }
 
 .galleryheading span {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
+background-color: goldenrod;
   padding: 8px 18px;
   border-radius: 30px;
-  box-shadow: 0 8px 25px rgba(0, 114, 255, 0.5);
+  box-shadow: 2px 10px  goldenrod;
 }
 
-/* ===== Grid Gallery ===== */
-/* ===== Grid Gallery ===== */
 
 .gallerygrid {
   display: grid;
@@ -116,7 +114,6 @@
     font-size: 28px;
   }
 
-  /* ✅ FORCE 2 COLUMNS ON PHONE */
   .gallerygrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;

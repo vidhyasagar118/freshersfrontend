@@ -1,15 +1,18 @@
 .gallerymainhome {
   padding: 60px 5vw;
-  background:lightseagreen;
+  /* background:rgba(0, 0, 0, 0.114); */
   text-align: center;
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.05); /* subtle inner shading */
+  border: 2px solid orange ;
+  box-shadow: inset 0 0 10px goldenrod ;
   border-radius: 12px; /* optional, round corners for modern look */
 }
 
-.gallerymainhome h2 {
-  font-size: 32px;
+.gallerymainhome h1{
+  font-size: 32px; 
+    border: 3px orange ;
+ background: black ;
   margin-bottom: 40px;
-  color: #0072ff;
+  color: goldenrod ;
   font-weight: bold;
 }
 
@@ -20,7 +23,6 @@
   gap: 15px; 
 }
 
-/* Card / image styling */
 .gallerycard {
   overflow: hidden;
   border-radius: 16px;
@@ -46,14 +48,14 @@
 
 /* Responsive tweaks */
 @media (max-width: 1024px) {
-  .gallerymainhome h2 {
+  .gallerymainhome h1{
     font-size: 28px;
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 600px) {
-  .gallerymainhome h2 {
+  .gallerymainhome h1{
     font-size: 24px;
     margin-bottom: 20px;
   }

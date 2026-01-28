@@ -1,15 +1,16 @@
 /* Main container */
 .Mostexpectedvotemaindiv {
   margin: 5% auto;
-  max-width: 1200px;
-  padding: 0 20px;
+  max-width: 1200px;  
+ padding: 20px ;
 }
 
 /* Heading */
 .Mostexpectedvotemaindiv h1 {
-  color: white;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  padding: 15px;
+  color: goldenrod;
+  background:  black;
+  padding: 15px;   
+  border: 3px solid orange ;
   border-radius: 10px;
   text-align: center;
   font-size: 2rem;

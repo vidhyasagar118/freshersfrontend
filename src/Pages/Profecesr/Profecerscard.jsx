@@ -4,12 +4,23 @@ import { API_URL } from "../../config";
 
 const normalizeName = (name = "") =>
   name.toLowerCase().replace(/\./g, "").replace(/\s+/g, " ").trim();
-
 const imageMap = {
+  "prof sanjay srivastava": "/profecers/sanjay.jpeg",
+  "prof prasoon dutta": "/profecers/prasoon.png",
+  "prof ranjeet kr chaudhary": "/profecers/ranjeet.jpeg",
+  "prof arttarana pal": "/profecers/arttarana.jpeg",
+
   "dr vikash pareek": "/profecers/vikash.jpeg",
   "dr sunil kumar": "/profecers/sunil.jpeg",
   "dr shubham kumar": "/profecers/subham.jpeg",
-  "dr arvind kumar": "/profecers/arvind.jpeg",
+  "dr arvind shukla": "/profecers/arvind.jpeg",
+
+  "prof devdutt chaturvedi": "/profecers/devdutt.jpeg",
+  "mrs komal rai": "/profecers/komal.jpeg",
+  "mrs smriti jain": "/profecers/smriti.jpeg",
+  "mr harshit srivastava": "/profecers/harshit.jpeg",
+  "dr rahul": "/profecers/rahul.jpeg",
+  "dr satyam": "/profecers/satyam.jpeg"
 };
 
 const Profecerscard = () => {
@@ -34,8 +45,7 @@ const Profecerscard = () => {
 
   return (
     <div className="Profecerscardmaindiv">
-      <h1>PROFESSORS DETAILS</h1>
-
+           <h1>OUR ESTEEMED GUESTS</h1>
       <div className="Profecersdiv">
         {loading ? (
           <h2>Loading...</h2>

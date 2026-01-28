@@ -10,11 +10,13 @@ const Footer = () => {
       <div className="footer-container">
 
         <div className="footer-left">
-          <h2>Freshers 2025</h2>
-          <p>
+          <h2>Freshers 2K26</h2>
+          
+                      <p>
             Welcome to Freshers Voting Portal <br />
             Vote fairly • Celebrate talent • One vote matters
           </p>
+
         </div>
 
         <div className="footer-center">
@@ -29,15 +31,15 @@ const Footer = () => {
         </div>
 
         <div className="footer-right">
-          <h3>Connect</h3>
-          <p>📧 freshers@college.com</p>
+          <h3>Contact</h3>
+          <p>📧 abhishekhkushwah.118@gmail.com</p>
           <p>📍 MGCU Campus</p>
         </div>
 
       </div>
 
       <div className="footer-bottom">
-        @ 2025 Freshers Voting || All Rights Reserved
+        @ 2K26 Freshers Voting || All Rights Reserved
       </div>
     </footer>
   );

@@ -1,7 +1,9 @@
 .footer {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 40px 0 10px 0;
+  background:goldenrod ;
+  color:  black ;
+  font-weight: bold ;
+  padding: 40px 0 10px 0;  
+  box-shadow:  0 5px 10px 10px lightyellow ;
   margin-top: 50px;
 }
 
@@ -22,7 +24,8 @@
 }
 
 .footer-left h2 {
-  color: #00d4ff;
+  color: red ;
+  margin-bottom: 10px
 }
 
 .footer-center ul {
@@ -37,7 +40,7 @@
 }
 
 .footer-center ul li:hover {
-  color: #00d4ff;
+  color: white
 }
 
 .footer-bottom {

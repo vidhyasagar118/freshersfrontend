@@ -9,6 +9,7 @@ import {
 import Rootlayout from './layout/Rootlayout.jsx'
 import Login from './Login/Login'
 import Signup from './Login/Signup'
+import EventrFlow from './EventFlow.jsx'
 import Navbar from './contents/Navbar.jsx'
 import Contact from './Pages/Contact.jsx'
 import Home from './Pages/Home'
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path='Navbar' element={<Navbar />} />
                       <Route path='contact' element={<Contact />} />
                       <Route path='vote' element={<Votesectiondiv />} />
+                            <Route path='event' element={<EventrFlow />} />
 
                       <Route path='about' element={< About/>} />
 

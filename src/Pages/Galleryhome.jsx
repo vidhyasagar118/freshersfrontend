@@ -14,7 +14,7 @@ const Galleryhome = () => {
 
   return (
     <div className="gallerymainhome">
-      <h1>Freshers 2024 Photos</h1>
+      <h1>FRESHERS 2K25 IMAGES</h1>
 
       <div className="gallerygrid">
         {images.map((img, index) => (

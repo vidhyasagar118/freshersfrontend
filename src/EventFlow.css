@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.event-container {
+    margin-top: 50px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 20px;
+  /* background: radial-gradient(circle at top, #111 0%, #000 60%); */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.eventheading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: goldenrod;
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.eventsubheading {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.event-card {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 0 35px rgba(255, 204, 0, 0.35);
+  border-color: rgba(255, 204, 0, 0.4);
+}
+
+.event-time {
+  display: inline-block;
+  background: goldenrod;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.event-card h2 {
+  color: goldenrod;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.event-card p {
+  color: #ddd;
+  line-height: 1.6;
+  margin-left: 10px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.event-card p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: goldenrod;
+}
+
+@media (max-width: 600px) {
+  .event-title {
+    font-size: 1.8rem;
+  }
+
+  .event-card {
+    padding: 18px;
+  }
+
+  .event-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .event-time {
+    font-size: 0.8rem;
+  }
+}

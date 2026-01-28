@@ -3,6 +3,7 @@ import "./Navbar.css";
 import Mainnavbar from "./Mainnavbar";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [user, setUser] = useState(null);
@@ -34,7 +35,7 @@ const Navbar = () => {
               />
             </div>
           </li>
-          <li className="sitename">FRESHER.COM</li>
+          <li className="sitename">SPARK NIGHT </li>
           <li>
             <img
               src="https://image-static.collegedunia.com/public/image/09-18:26-Thumbnail_%201%20College%20and%20Exam%20-%202024-11-09T182018.967.jpeg"

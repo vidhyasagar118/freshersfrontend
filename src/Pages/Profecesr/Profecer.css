@@ -1,28 +1,35 @@
 .Profecerscardmaindiv {
   padding: 30px;
-    background:lightseagreen;
-margin-top:20px;
+  border: 2px solid goldenrod;
+  border-radius: 20px;
+  margin-top: 20px;
   color: black;
   min-height: 60vh;
 }
-.Profecerscardmaindiv h1{
-    text-align: center;
-    color: black;
+
+.Profecerscardmaindiv h1 {
+  text-align: center;
+  color: goldenrod;
 }
+
+/* ===== GRID ===== */
 .Profecersdiv {
+  margin-top: 13px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-items: center;
 }
 
+/* ===== CARD ===== */
 .profCard {
-  background: #FFFFFF;
+  background: #fff9c4;
   color: black;
   border-radius: 15px;
-  padding: 20px;
+  font-weight: bold;
+  padding: 15px;
   text-align: center;
-  width: 250px;
+  width: 100%; /* important for mobile */
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -32,6 +39,7 @@ margin-top:20px;
   box-shadow: 0 20px 30px rgba(0,0,0,0.2);
 }
 
+/* ===== IMAGE ===== */
 .profImgWrapper {
   width: 120px;
   height: 120px;
@@ -48,11 +56,12 @@ margin-top:20px;
   display: block;
 }
 
+/* ===== TEXT ===== */
 .profName {
-  font-size: 1.2rem;
-  color: #0F172A;
+  font-size: 1.1rem;
+  color: #0f172a;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   position: relative;
 }
 
@@ -60,25 +69,52 @@ margin-top:20px;
   content: '';
   display: block;
   height: 4px;
-  width: 50px;
+  width: 40px;
   margin: 6px auto 0;
   border-radius: 2px;
   background: linear-gradient(90deg, #6a11cb, #2575fc);
 }
 
 .profRole {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
 }
 
+/* ===== TABLET ===== */
 @media (max-width: 900px) {
   .Profecersdiv {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .profImgWrapper {
+    width: 90px;
+    height: 90px;
   }
 }
 
+/* ===== MOBILE (4 IN ONE ROW) ===== */
 @media (max-width: 500px) {
   .Profecersdiv {
-    grid-template-columns: 2fr;
+    grid-template-columns: repeat(4, 1fr); /* still 4 */
+    gap: 10px;
+  }
+
+  .profCard {
+    padding: 8px;
+  }
+
+  .profImgWrapper {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  .profName {
+    font-size: 0.65rem;
+  }
+
+  .profRole {
+    font-size: 0.6rem;
   }
 }

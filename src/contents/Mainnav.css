@@ -10,7 +10,7 @@
   transform: translateX(-100%);
   opacity: 0;
 
-  background: linear-gradient(180deg, #081037, #182d5d);
+  background: black ;
   color: white;
 
   display: flex;
@@ -33,7 +33,7 @@
   padding: 10px 24px;
   border: none;
   border-radius: 30px;
-  background: #111827;
+  background: goldenrod;
   color: white;
   cursor: pointer;
   transition: 0.3s;

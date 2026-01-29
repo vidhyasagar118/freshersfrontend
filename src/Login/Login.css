@@ -29,7 +29,7 @@
   box-sizing: border-box;
 }
 
-.auth-form button {
+.auth-form .loginbutton {
   width: 100%;
   padding: 12px 10px;
   margin-top: 10px;
@@ -49,4 +49,21 @@
 .auth-form p {
   margin-top: 8px;
   font-weight: bold;
+}
+.loginotherbtn{
+  display: flex;
+  margin-top: 20px ;
+  gap: 30px;
+  align-items: center;
+  margin-left: 25px;
+  
+}
+.otherloginbtn{
+  background-color:yellowgreen;
+  box-shadow: 2px 5px 2px black;
+  color: rgb(165, 15, 15);
+  padding:10px;
+  border: 3px solid goldenrod;
+  font-weight: bold;
+border-radius: 10px;
 }

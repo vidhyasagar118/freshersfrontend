@@ -96,10 +96,12 @@ if (!regex.test(enrollmentnum)) {
           required
         />
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <button type="submit">Login</button>
-        <p>
-          New user? <Link to="/signup">Signup</Link>
-        </p>
+        <button className="loginbutton"  type="submit">Login</button>
+                <div className="loginotherbtn">
+                          <button className="otherloginbtn" onClick={()=>navigate("/signup")}> New register</button>
+
+           <button className="otherloginbtn" onClick={()=>navigate("/prologin")}>authoroties login</button>
+        </div>
       </form>
     </div>
   );

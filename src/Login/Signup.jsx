@@ -89,13 +89,14 @@ if (!regex.test(enrollmentnum)) {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <button type="submit" disabled={!googleVerified}>
+        <button type="submit" className="loginbutton" disabled={!googleVerified}>
           Complete Signup
         </button>
 
         <p>
           Already have account? <Link to="/login">Login</Link>
         </p>
+
       </form>
     </div>
   );

@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import Mainnavbar from "./Mainnavbar";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, useLocation } from "react-router-dom"; // ✅ added useLocation
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation(); // ✅ added
 
   useEffect(() => {
-  const userData = localStorage.getItem("user");
+    const userData = localStorage.getItem("user");
 
-  if (userData && userData !== "undefined") {
-    try {
-      setUser(JSON.parse(userData));
-    } catch (err) {
-      console.log("Invalid user in localStorage", err);
-      localStorage.removeItem("user");
+    if (userData && userData !== "undefined") {
+      try {
+        setUser(JSON.parse(userData));
+      } catch (err) {
+        console.log("Invalid user in localStorage", err);
+        localStorage.removeItem("user");
+        setUser(null);
+      }
+    } else {
       setUser(null);
     }
-  }
-}, []);
+  }, [location]); // ✅ runs after login redirect also
 
   return (
     <>
@@ -35,7 +37,9 @@ const Navbar = () => {
               />
             </div>
           </li>
+
           <li className="sitename">SPARK NIGHT </li>
+
           <li>
             <img
               src="https://image-static.collegedunia.com/public/image/09-18:26-Thumbnail_%201%20College%20and%20Exam%20-%202024-11-09T182018.967.jpeg"
@@ -43,14 +47,12 @@ const Navbar = () => {
               alt=""
             />
           </li>
+
           <li>
             {user ? (
               <div className="userlogin" onClick={() => navigate("/login")}>
-                <img
-                  src="https://as1.ftcdn.net/v2/jpg/02/01/33/54/1000_F_201335438_CNpY0iWaXXAV95Gj8BPB0tEJlMcxWeaZ.jpg" width="40px"
-                  alt={user.name}
-                  className="userlogo"
-                />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_MhcHdtk7pSGG903TzzIeZkOVjnL5iJjdlQ&s" alt="img" width="30px" />
+                <span>sucsess</span>
               </div>
             ) : (
               <button
@@ -63,6 +65,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
       <Mainnavbar isVisible={showMenu} onClose={() => setShowMenu(false)} />
     </>
   );

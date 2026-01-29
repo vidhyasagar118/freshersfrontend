@@ -17,6 +17,7 @@ import About from './Pages/About.jsx'
 import Votesectiondiv from './Pages/Votesection/Votesectiondiv.jsx'
 import Galleryhome from './Pages/Galleryhome.jsx'
 import Gallery from './contents/fulldata/Gallery.jsx'
+import Prologin from './Login/Prologin.jsx'
 const App = () => { 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,6 +29,7 @@ const App = () => {
                             <Route path='event' element={<EventrFlow />} />
 
                       <Route path='about' element={< About/>} />
+                                            <Route path='prologin' element={<  Prologin/>} />
 
         <Route path='signup' element={<Signup />} />
         <Route path='login' element={<Login />} />

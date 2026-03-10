@@ -7,7 +7,6 @@ import FreshersMobile from "../assets/freshermobile.jpeg";
 import Mostexpectedvote from "./Mostexpectedvote";
 import EventrFlow from "../EventFlow";
 import Galleryhome from "./Galleryhome";
-
 const Home = () => {
   const [showNotice, setShowNotice] = useState(false);
 
@@ -67,7 +66,6 @@ const Home = () => {
           <img src={Freshersimg} alt="freshers banner" />
         </picture>
       </div>
-
       <Votebtn />
       <Mostexpectedvote />
             <EventrFlow />

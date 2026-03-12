@@ -20,7 +20,7 @@ const imageMap = {
   "mrs smriti jain": "/profecers/smriti.jpeg",
   "mr harshit srivastava": "/profecers/harshit.jpeg",
   "dr rahul": "/profecers/rahul.jpeg",
-  "dr satyam": "/profecers/satyam.jpeg"
+  "mr satyam kumar singh": "/profecers/satyam.jpeg"
 };
 
 const Profecerscard = () => {

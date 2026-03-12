@@ -88,14 +88,13 @@ body{
   }
 }
 
-/* ===== TIMER BOX ===== */
 .timerBox{
   display: flex;
   justify-content: center;
   gap: 25px;
   margin: 20px 0 30px;
+  flex-wrap: wrap;   /* ✅ ye line add karo */
 }
-
 .timerBox div{
   background: #1f1f1f;
   border: 1px solid #c9981b;
@@ -116,4 +115,30 @@ body{
   margin: 0;
   font-size: 12px;
   color: #AF9657;
+}
+@media (max-width: 600px){
+
+  .votebtnh1{
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  .timerBox{
+    gap: 10px;
+  }
+
+  .timerBox div{
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .timerBox span{
+    font-size: 20px;
+  }
+
+  .Votepageshow{
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
 }

@@ -15,7 +15,7 @@ const Contact = () => {
         {/* RIGHT - DETAILS */}
         <div className="contactRight">
           <h2 className="contactName">Vidhya Sagar Kushwaha</h2>
-          <p className="contactEnroll">Enrollment No: <span>MGCU2024CSIT3029</span></p>
+          <p className="contactEnroll">Btech 2nd year  (MGCUB) </p>
 
           <p className="contactInfo">📧 abhishekhkushwah.118@gmail.com</p>
           <p className="contactInfo">📞 6367697913</p>

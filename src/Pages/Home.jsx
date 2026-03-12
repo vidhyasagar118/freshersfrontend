@@ -3,7 +3,7 @@ import Votebtn from "./Votebtn";
 import Profecerscard from "./Profecesr/Profecerscard";
 import "./Home.css";
 import Freshersimg from "../assets/Homeimg.png";
-import FreshersMobile from "../assets/freshermobile.jpeg";
+import FreshersMobile from "../assets/freshermobile.jpg";
 import Mostexpectedvote from "./Mostexpectedvote";
 import EventrFlow from "../EventFlow";
 import Galleryhome from "./Galleryhome";

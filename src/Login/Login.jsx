@@ -73,6 +73,9 @@ if (!regex.test(enrollmentnum)) {
 
   return (
     <div className="auth-container">
+       <div className="ruleofreg">
+      <p> <b>Note</b>:first click on new register then login </p>
+      </div>
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
@@ -103,6 +106,7 @@ if (!regex.test(enrollmentnum)) {
            <button className="otherloginbtn" onClick={()=>navigate("/prologin")}>authoroties login</button>
         </div>
       </form>
+     
     </div>
   );
 };

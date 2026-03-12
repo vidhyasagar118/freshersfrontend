@@ -21,15 +21,15 @@ const Signup = () => {
     setEmail(user.email);
     setGoogleVerified(true);
   };
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-const regex = /^MGCU(2022|2023|2024|2025)CSIT30\d{2}$/;
 
-if (!regex.test(enrollmentnum)) {
-  return setError("Invalid Enrollment Number format");
-}
+    const regex = /^MGCU(2022|2023|2024|2025)CSIT30\d{2}$/;
+
+    if (!regex.test(enrollmentnum)) {
+      return setError("Invalid Enrollment Number format");
+    }
 
     if (!googleVerified) {
       return setError("Please verify with Google first");
@@ -48,7 +48,7 @@ if (!regex.test(enrollmentnum)) {
         alert("Signup successful");
         navigate("/login");
       } else {
-        alert(data.message); // 🔥 notification
+        alert(data.message);
         setError(data.message);
       }
     } catch {
@@ -58,46 +58,66 @@ if (!regex.test(enrollmentnum)) {
 
   return (
     <div className="auth-container">
-      <form className="auth-form" onSubmit={handleSubmit}>
-        <h2>Signup</h2>
+      
 
-        {!googleVerified && (
-          <GoogleLogin
-            onSuccess={handleGoogleSuccess}
-            onError={() => setError("Google Login Failed")}
+      <div>
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <h2>Signup</h2>
+
+          {!googleVerified && (
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={() => setError("Google Login Failed")}
+            />
+          )}
+
+          <input
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
-        )}
 
-        <input placeholder="Name" value={name} disabled />
+          <input placeholder="Email" value={email} disabled />
 
-        <input placeholder="Email" value={email} disabled />
+          <input
+            placeholder="Enrollment Number"
+            value={enrollmentnum}
+            onChange={(e) => setEnrollmentnum(e.target.value.toUpperCase())}
+            required
+          />
 
-        <input
-          placeholder="Enrollment Number"
-          value={enrollmentnum}
-          onChange={(e) => setEnrollmentnum(e.target.value.toUpperCase())}
-          required
-        />
+          <input
+            placeholder="Create Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <input
-          placeholder="Create Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
-        {error && <p style={{ color: "red" }}>{error}</p>}
+          <button
+            type="submit"
+            className="loginbutton"
+            disabled={!googleVerified}
+          >
+            Complete Signup
+          </button>
 
-        <button type="submit" className="loginbutton" disabled={!googleVerified}>
-          Complete Signup
-        </button>
-
-        <p>
-          Already have account? <Link to="/login">Login</Link>
-        </p>
-
-      </form>
+          <p>
+            Already have account? <Link to="/login">Login</Link>
+          </p>
+        </form>
+      </div>
+      <div className="ruleofreg">
+        <h1 className="ruleh1">steps of register</h1>
+        <p>1. signup with google</p>
+        <p>2. then enter your enrollment number</p>
+        <p>3. create password</p>
+        <p>4. click complete signup button</p>
+        <p>5. go to login page and login</p>
+       <b>Note</b>: if any problem or email Already exists  <button style={{color:"red"}} onClick={()=>{navigate("/contact")}}>contact</button> me 
+      </div>
     </div>
   );
 };

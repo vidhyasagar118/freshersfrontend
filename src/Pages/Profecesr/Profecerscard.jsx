@@ -6,7 +6,7 @@ const normalizeName = (name = "") =>
   name.toLowerCase().replace(/\./g, "").replace(/\s+/g, " ").trim();
 const imageMap = {
   "prof sanjay srivastava": "/profecers/sanjay.jpeg",
-  "prof prasoon dutta": "/profecers/prasoon.png",
+  "prof prasoon dutta singh": "/profecers/prasoon.png",
   "prof ranjeet kr chaudhary": "/profecers/ranjeet.jpeg",
   "prof arttarana pal": "/profecers/arttarana.jpeg",
 

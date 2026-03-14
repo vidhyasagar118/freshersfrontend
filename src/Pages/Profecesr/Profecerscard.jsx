@@ -19,7 +19,7 @@ const imageMap = {
   "mrs komal rai": "/profecers/komal.jpeg",
   "mrs smriti jain": "/profecers/smriti.jpeg",
   "mr harshit srivastava": "/profecers/harshit.jpeg",
-  "dr rahul": "/profecers/rahul.jpeg",
+  "dr rahul kumar": "/profecers/rahul.jpeg",
   "mr satyam kumar singh": "/profecers/satyam.jpeg"
 };
 

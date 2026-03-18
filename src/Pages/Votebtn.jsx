@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 const Votebtn = () => {
   const navigate = useNavigate();
 
-  const targetDate = new Date("2026-03-18T20:30:00");
+  // Set target time to 8:30 PM today
+  const targetDate = new Date();
+  targetDate.setHours(20, 30, 0, 0);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -17,12 +19,11 @@ const Votebtn = () => {
   const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const updateTimer = () => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
 
       if (distance <= 0) {
-        clearInterval(timer);
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setIsLive(true);
         return;
@@ -34,12 +35,15 @@ const Votebtn = () => {
         minutes: Math.floor((distance / (1000 * 60)) % 60),
         seconds: Math.floor((distance / 1000) % 60),
       });
-
       setIsLive(false);
-    }, 1000);
+    };
+
+    updateTimer(); // Call immediately on mount
+
+    const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   return (
     <div className="homevotesection">

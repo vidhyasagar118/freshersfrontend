@@ -8,23 +8,27 @@ const Votesectiondiv = () => {
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const targetDate = new Date("2026-03-02T20:30:00");
+  // Set target time to 8:30 PM today
+  const targetDate = new Date();
+  targetDate.setHours(20, 30, 0, 0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const updateVoteStatus = () => {
       const now = new Date().getTime(); 
       const distance = targetDate.getTime() - now;
 
       if (distance <= 0) {
         setIsLive(true);
-        clearInterval(timer);
       } else {
         setIsLive(false);
       }
-    }, 1000);
+    };
+
+    updateVoteStatus(); // Check immediately on mount
+    const timer = setInterval(updateVoteStatus, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   const loadStudents = async () => {
     try {

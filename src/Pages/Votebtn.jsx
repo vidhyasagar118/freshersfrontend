@@ -43,7 +43,7 @@ const Votebtn = () => {
         minutes: Math.floor((distance / (1000 * 60)) % 60),
         seconds: Math.floor((distance / 1000) % 60),
       });
-    }, 1000);
+``    }, 1000);
 
     return () => clearInterval(timer);
   }, []);

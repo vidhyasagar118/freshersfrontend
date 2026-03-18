@@ -8,7 +8,7 @@ const Votesectiondiv = () => {
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const targetDate = new Date("2026-03-02T21:30:00");
+  const targetDate = new Date("2026-03-02T20:30:00");
 
   useEffect(() => {
     const timer = setInterval(() => {

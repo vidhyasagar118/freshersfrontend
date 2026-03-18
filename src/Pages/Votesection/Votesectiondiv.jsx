@@ -4,14 +4,8 @@ import { API_URL } from "../../config";
 const Votesectiondiv = () => {
   const [students, setStudents] = useState([]);
   const [hasVoted, setHasVoted] = useState(false);
-  const [isLive, setIsLive] = useState(false);
 
   const user = JSON.parse(localStorage.getItem("user"));
-
-  // Voting is now enabled
-  useEffect(() => {
-    setIsLive(true);
-  }, []);
 
   const loadStudents = async () => {
     try {
@@ -74,13 +68,11 @@ const Votesectiondiv = () => {
 
             <button
               className="voteBtn"
-              disabled={!user || hasVoted || !isLive}
+              disabled={!user || hasVoted}
               onClick={() => vote(s.enrollmentnum)}
             >
               {!user
                 ? "Login to Vote"
-                : !isLive
-                ? "Voting Not Started"
                 : hasVoted
                 ? "Voted"
                 : "Vote"}

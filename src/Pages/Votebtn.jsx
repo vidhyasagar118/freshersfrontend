@@ -17,6 +17,15 @@ const Votebtn = () => {
   const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
+    // Check initial state
+    const now = new Date().getTime();
+    const distance = targetDate.getTime() - now;
+    if (distance <= 0) {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      setIsLive(true);
+      return;
+    }
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
@@ -34,8 +43,6 @@ const Votebtn = () => {
         minutes: Math.floor((distance / (1000 * 60)) % 60),
         seconds: Math.floor((distance / 1000) % 60),
       });
-
-      setIsLive(false);
     }, 1000);
 
     return () => clearInterval(timer);

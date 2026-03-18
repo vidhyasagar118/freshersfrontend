@@ -11,7 +11,7 @@ const imageMap = {
   "prof arttarana pal": "/profecers/arttarana.jpeg",
 
   "dr vikash pareek": "/profecers/vikash.jpeg",
-  "dr sunil kumar": "/profecers/sunil.jpeg",
+  "dr sunil kumar singh": "/profecers/sunil.jpeg",
   "dr shubham kumar": "/profecers/subham.jpeg",
   "dr arvind shukla": "/profecers/arvind.jpeg",
 
